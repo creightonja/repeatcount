@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>Repeat word checker</title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <style>
+        body{
+            background: grey;
+            overflow: auto;
+        }
+        .container{
+            background: white;
+            border-radius: 2px;
+            height: 100%;
+        }
+        h1 {
+            margin: 40px;
+            text-align: center;
+        }
+        h2 {
+            text-align: center;
+            background: lightgrey;
+            padding: 40px;
+            margin: 30px;
+            border-radius: 20px;
+        }
+        h2 small {
+            padding: 30px;
+        }
+        .submit_form {
+            margin-top: 20px;
+        }
+        h1 span {
+            background: #c7f99d;
+            padding: 20px;
+            border-radius: 15px;
+        }
+        .btn{
+            background: #a0ce9a;
+        }
+        </style>
+
+
+    </head>
+    <body>
+        <div class="container">
+            <h2 class="">Find the instances of your word.<br><small>Enter matching sentence seperated by spaces!</small></h2>
+            <div class="submit_form">
+                <form id="form_id" action="/result">
+                    <div class="form-group">
+                        <label for="textInput">Word to check: </label>
+                        <input type="text" class="form-control" name="input_word" id="input_word">
+                    </div>
+                    <div class="form-group">
+                        <label for="textInput">Reference words to check: </label>
+                        <input type="text" class="form-control" name="input_check_list" id="input_check_list">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit your words</button>
+                </form>
+            </div>
+            <div id="result">
+                <h1>The amount of repeats is: <span>{{ result }}</span></h1>
+            </div>
+        </div>
+    </body>
+</html>
