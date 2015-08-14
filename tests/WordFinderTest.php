@@ -19,7 +19,16 @@
 
 
         //Find lowercase word in a string                                   as                          as                      Found 1 match(es)
+        function test_WordFinder_double_lower_case() {
+            $test_WordFinder = new WordFinder;
+            $input_word = "as";
+            $input_check_list = "as";
 
+            $result = $test_WordFinder->makeWord($input_word, $input_check_list);
+
+            $this->assertEquals("as", $result);
+
+        }
 
 
 
