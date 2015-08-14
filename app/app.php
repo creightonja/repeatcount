@@ -20,6 +20,7 @@
         return $app["twig"]->render("submit.html.twig", array('result' => " "));
     });
 
+    //Setting result page and linking back to home page to display results on one page.
     $app->get("/result", function() use ($app) {
         $repeat_count_list = new RepeatCounter;
         $repeat_count = $repeat_count_list->countRepeats($_GET['input_word'], $_GET['input_check_list']);
